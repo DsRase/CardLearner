@@ -56,7 +56,7 @@ class Window(Tk):
 
         self.current_card = None
         self.card_frame = ttk.Frame(self).pack()
-        self.current_btn = ttk.Button(self.card_frame, text="Нажми - похуй го некст", width=50, command=self.flip_card)
+        self.current_btn = ttk.Button(self.card_frame, text="Нажми - следующая", width=50, command=self.flip_card)
 
         self.show_menu()
 
@@ -72,7 +72,7 @@ class Window(Tk):
         self.current_btn.pack()
         frame = ttk.Frame(self).pack()
         ttk.Button(frame, text="Перезапуск", width=25, command=learner.restart).pack(side='left')
-        ttk.Button(frame, text="Похуй, го некст", width=25, command=self.show_new_card).pack(side='right')
+        ttk.Button(frame, text="Дальше", width=25, command=self.show_new_card).pack(side='right')
 
     def flip_card(self):
         if self.mode:
